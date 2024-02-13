@@ -28,12 +28,12 @@
 
         <!-- home start here -->
 
-        <section class="min-h-screen flex justify-center items-center ">
+        <section id="homeScreen" class="min-h-screen flex justify-center items-center ">
 
             <div class="text-center space-y-9 ">
                 <h1 class="text-9xl anton-regular tracking-wide">ALPHABET CLASH</h1>
                 <p class="poppins-medium text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button type="button" class="focus:outline-none text-[#010313] bg-white hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-8 py-4 mb-l poppins-medium -green-700 d[#010313]ibg-white-green-800">Play Now</button>
+                <button onclick="play()" type="button" class="focus:outline-none text-[#010313] bg-white hover:bg-cyan-400 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-8 py-4 mb-l poppins-medium -green-700 d[#010313]ibg-white-green-800">Play Now</button>
             </div>
 
         </section>
@@ -42,7 +42,7 @@
 
         <!-- playground start here -->
 
-        <section class="playground py-10 hidden">
+        <section id="playGround" class="playground py-10 hidden">
 
             <!-- screen start here  -->
 
@@ -201,6 +201,8 @@
     <footer>
 
     </footer>
+
+    <script src="script/utility.js"></script>
 
     <script src="script/index.js"></script>
 </body>
