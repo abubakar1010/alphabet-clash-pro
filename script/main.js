@@ -45,34 +45,66 @@ document.addEventListener('keyup', function(event){
     
     if( expectedKey === playerKey){
 
-        // update score 
-        
-        // 1.current score
+        const currentScore = getCurrentElementById('score')
 
-        const currentScore = document.getElementById('score')
+        const updatedScore = currentScore + 1
 
-        const currentScoreText = currentScore.innerText
+        setValueById('score', updatedScore)
 
-        const currentScoreNumber = parseInt(currentScoreText)
 
-        // 2.increase score by 1
 
-        const updatedScore = currentScoreNumber + 1
 
-        console.log(updatedScore);
+        //-----------------------------------
 
-        // 3.show the update score
+        // // update score 
 
-        currentScore.innerText = updatedScore
+        // // 1.current score
 
-        //new round 
+        // const currentScore = document.getElementById('score')
+
+        // const currentScoreText = currentScore.innerText
+
+        // const currentScoreNumber = parseInt(currentScoreText)
+
+        // // 2.increase score by 1
+
+        // const updatedScore = currentScoreNumber + 1
+
+        // console.log(updatedScore);
+
+        // // 3.show the update score
+
+        // currentScore.innerText = updatedScore
+
+        // //new round 
 
         continueGame()
         removeBackground(expectedKey.toUpperCase())
 
 
     }else{
-        console.log('lose');
-    }
+        const currentChances = getCurrentElementById('chances')
 
-})
+        const updatedChances = currentChances - 1
+
+        setValueById('chances', updatedChances)
+    //     // update chances 
+        
+    //     // 1.current chances
+
+    //     const currentChances = document.getElementById('chances')
+
+    //     const currentChancesText = currentChances.innerText
+
+    //     const currentChancesNumber = parseInt(currentChancesText)
+
+    //     // 2.decrease chances by 1
+
+    //     const updatedChances = currentChancesNumber - 1
+
+    //     // 3.show the update chances
+
+    //     currentChances.innerText = updatedChances
+    // }
+
+}})
