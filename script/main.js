@@ -13,7 +13,7 @@ button.addEventListener('click', function () {
 
 })
 
-
+    let yourScore = 0
 
 function continueGame(){
 
@@ -37,9 +37,17 @@ document.addEventListener('keyup', function(event){
 
     const expectedKey = event.key
 
+    console.log(expectedKey);
+
     const currentKey = document.getElementById('addAlphabet')
 
     const  playerKey = (currentKey.innerText).toLowerCase()
+
+    //quit game if user prase esc
+
+    if( expectedKey === "Escape"){
+        gameOver()
+    }
 
     //check user input
     
@@ -48,6 +56,8 @@ document.addEventListener('keyup', function(event){
         const currentScore = getCurrentElementById('score')
 
         const updatedScore = currentScore + 1
+
+        yourScore = updatedScore
 
         setValueById('score', updatedScore)
 
@@ -88,6 +98,11 @@ document.addEventListener('keyup', function(event){
         const updatedChances = currentChances - 1
 
         setValueById('chances', updatedChances)
+
+        if( updatedChances === 0){
+            gameOver()
+            
+        }
     //     // update chances 
         
     //     // 1.current chances

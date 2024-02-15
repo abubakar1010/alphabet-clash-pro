@@ -9,6 +9,8 @@ function setAndRemoveElement(addClass,removeClass){
     removeHomePage.classList.add('hidden')
     addPlayGround.classList.remove('hidden')
 
+    resetScoreAndChances()
+
 }
 
 // step-->02: make random Alphabets
@@ -64,4 +66,24 @@ function setValueById(id, value){
     const updatedNumber = document.getElementById(id)
 
     updatedNumber.innerText = value
+
+   
+}
+
+function gameOver(){
+
+    setAndRemoveElement("playGround","newGame")
+
+    
+
+    setValueById('finalScore', yourScore)
+
+    
+}
+
+function resetScoreAndChances(){
+    //  reset score and chances
+    setValueById("score", 0)
+    setValueById("chances", 5)
+    setValueById("finalScore", 0)
 }
