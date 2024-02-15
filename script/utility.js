@@ -27,11 +27,20 @@ function makeRandomAlphabets(){
 
 }
 
-//step --> set enter text background
+//step 03: --> set enter text background
 
 function setBackground(keyId){
 
     const key = document.getElementById(keyId)
 
     key.classList.add("bg-orange-400")
+}
+
+// step 04: ---> after click right button 
+
+function removeBackground(keyId){
+
+    const key = document.getElementById(keyId)
+
+    key.classList.remove("bg-orange-400")
 }
