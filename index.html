@@ -33,7 +33,7 @@
             <div class="text-center space-y-9 ">
                 <h1 class="text-9xl anton-regular tracking-wide">ALPHABET CLASH</h1>
                 <p class="poppins-medium text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button onclick="play()" type="button" class="focus:outline-none text-[#010313] bg-white hover:bg-cyan-400 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-8 py-4 mb-l poppins-medium -green-700 d[#010313]ibg-white-green-800">Play Now</button>
+                <button id="btn" class="focus:outline-none text-[#010313] bg-white hover:bg-cyan-400 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-8 py-4 mb-l poppins-medium -green-700 d[#010313]ibg-white-green-800">Play Now</button>
             </div>
 
         </section>
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="flex justify-center items-center h-full pb-10">
-                    <p class="text-black text-9xl poppins-extrabold ">Y</p>
+                    <p id="addAlphabet" class="text-black text-9xl poppins-extrabold uppercase">Y</p>
                 </div>
             </div>
 
@@ -70,16 +70,16 @@
 
                 <div id="firstRow " class="mb-12 space-x-2">
 
-                    <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">Q</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">W</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">E</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">R</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">T</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">Y</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">U</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">I</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">O</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">P</kbd>
+                <kbd id="Q" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">Q</kbd>
+                <kbd id="W" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">W</kbd>
+                <kbd id="E" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">E</kbd>
+                <kbd id="R" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">R</kbd>
+                <kbd id="T" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">T</kbd>
+                <kbd id="Y" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">Y</kbd>
+                <kbd id="U" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">U</kbd>
+                <kbd id="I" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">I</kbd>
+                <kbd id="O" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">O</kbd>
+                <kbd id="P" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">P</kbd>
 
                 </div>
 
@@ -89,15 +89,15 @@
 
             <div id="secondRow" class="mb-12 space-x-2">
 
-            <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">A</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">S</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">D</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">F</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">G</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">H</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">J</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">K</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">L</kbd>
+                <kbd id="A" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">A</kbd>
+                <kbd id="S" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">S</kbd>
+                <kbd id="D" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">D</kbd>
+                <kbd id="F" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">F</kbd>
+                <kbd id="G" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">G</kbd>
+                <kbd id="H" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">H</kbd>
+                <kbd id="J" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">J</kbd>
+                <kbd id="K" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">K</kbd>
+                <kbd id="L" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">L</kbd>
 
             </div>
 
@@ -107,13 +107,13 @@
 
                 <div id="thirdRow" class="mb-12 space-x-2">
 
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">Z</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">X</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">C</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">V</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">B</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">N</kbd>
-                <kbd class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">M</kbd>
+                <kbd id="Z" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">Z</kbd>
+                <kbd id="X" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">X</kbd>
+                <kbd id="C" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">C</kbd>
+                <kbd id="V" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">V</kbd>
+                <kbd id="B" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">B</kbd>
+                <kbd id="N" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">N</kbd>
+                <kbd id="M" class="px-4 py-3 text-xl poppins-medium  text-[#010313] bg-white border border-gray-200 rounded-lg ">M</kbd>
 
                 </div>
 

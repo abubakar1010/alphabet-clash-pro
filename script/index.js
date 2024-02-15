@@ -1,25 +1,25 @@
-// function play(){
-//     console.log("ok");
-//     const homePage = document.getElementById("homeScreen")
 
-//     homePage.classList.add('hidden')
+// entireGame
 
-//     // homePage.setAttribute('class', "hidden")
+const button = document.getElementById('btn')
 
-//     const playGroundPage = document.getElementById("playGround")
+button.addEventListener('click', function () {
 
-//     playGroundPage.classList.remove('hidden')
-// }
+    setAndRemoveElement("homeScreen","playGround")
 
+    makeRandomAlphabets()
 
-function play(){
-
-    hideAndShowElementById("homeScreen","playGround")
-
-}
+    continueGame()
+})
 
 function continueGame(){
-    console.log(getRandomAlphabet())
-}
 
-continueGame()
+    const alphabet = makeRandomAlphabets()
+
+    const parent = document.getElementById('addAlphabet')
+
+    parent.innerText = alphabet
+
+    setBackground(alphabet)
+
+}

@@ -1,29 +1,37 @@
-// hide and show Element
+//remove home page and show playground
 
-function hideAndShowElementById(hideElement,ShowElement){
+function setAndRemoveElement(addClass,removeClass){
 
-    const hide = document.getElementById(hideElement)
+    const removeHomePage = document.getElementById(addClass)
 
-    hide.classList.add("hidden")
+    const addPlayGround = document.getElementById(removeClass)
 
-    const show = document.getElementById(ShowElement)
+    removeHomePage.classList.add('hidden')
+    addPlayGround.classList.remove('hidden')
 
-    show.classList.remove("hidden")
 }
 
-// create a random letter 
+// step-->02: make random Alphabets
 
-function getRandomAlphabet(){
+function makeRandomAlphabets(){
 
-    const alphabetsString = "abcdefghijklmnopqrstuvwxyz"
+    const alphabetsString = 'abcdefghijklmnopqrstuvwxyz'
 
     const alphabetsArray = alphabetsString.split("")
 
-    let randomNumber = Math.round((Math.random() * 25))
+    const randomNumber = Math.floor(Math.random() * 26)
 
     const randomAlphabet = alphabetsArray[randomNumber].toUpperCase()
 
     return randomAlphabet
+
 }
 
+//step --> set enter text background
 
+function setBackground(keyId){
+
+    const key = document.getElementById(keyId)
+
+    key.classList.add("bg-orange-400")
+}
