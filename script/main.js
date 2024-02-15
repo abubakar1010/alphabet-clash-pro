@@ -46,9 +46,27 @@ document.addEventListener('keyup', function(event){
     if( expectedKey === playerKey){
 
         // update score 
+        
         // 1.current score
+
+        const currentScore = document.getElementById('score')
+
+        const currentScoreText = currentScore.innerText
+
+        const currentScoreNumber = parseInt(currentScoreText)
+
         // 2.increase score by 1
+
+        const updatedScore = currentScoreNumber + 1
+
+        console.log(updatedScore);
+
         // 3.show the update score
+
+        currentScore.innerText = updatedScore
+
+        //new round 
+
         continueGame()
         removeBackground(expectedKey.toUpperCase())
 
